@@ -1,0 +1,31 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+    </head>
+    <body>
+      <h1>Choose 3 Random Numbers between 1-50</h1>
+      <input type="number" id="1st" name="" value="">
+      <input type="number" id="2nd" name="" value="">
+      <input type="number" id="3rd" name="" value="">
+      <button type="button" id="getNumbers" name="button">PLAY THE LOTTERY</button>
+
+      <script type="text/javascript">
+      document.getElementById("getNumbers").addEventListener("click", function(){
+      let first = document.getElementById('1st').value;
+      let second = document.getElementById('2nd').value;
+      let third = document.getElementById('3rd').value;
+      // console.log(first);
+
+      let random = Math.floor(Math.random()*50)+1
+      console.log(random)
+      if(first == random || second == random || third == random){
+        console.log('You Win!')
+        }else{
+          console.log("You LOST!")
+        }
+      })
+      </script>
+    </body>
+  </html>
